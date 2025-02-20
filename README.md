@@ -1,0 +1,1 @@
+This repository demonstrates an uncommon HTML bug related to the improper use of the innerHTML property. The bug showcases potential XSS vulnerabilities and unexpected behavior when innerHTML is used with invalid data types (objects instead of strings).  The solution shows how to mitigate these issues using DOM manipulation techniques for safer and more reliable HTML rendering.
