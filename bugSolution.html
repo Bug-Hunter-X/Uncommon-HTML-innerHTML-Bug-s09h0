@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Correct usage of innerHTML with escaped HTML or DOM manipulation
+    let para = document.createElement("p");
+    para.textContent = "This is a paragraph.";
+    let link = document.createElement("a");
+    link.href = "#";
+    link.textContent = "This is a link.";
+    para.appendChild(link);
+    document.getElementById("myDiv").appendChild(para);
+
+    // Handle objects by creating HTML elements for each property 
+    let myObj = { name: "Test", value: 123 };
+    for (let key in myObj) {
+        let p = document.createElement('p');
+        p.textContent = key + ': ' + myObj[key];
+        document.getElementById('myDiv').appendChild(p);
+    }
+
+  </script>
+</body>
+</html>
