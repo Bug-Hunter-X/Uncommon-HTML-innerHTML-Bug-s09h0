@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrect usage of innerHTML with a string containing unescaped HTML tags
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph. <a href="#">This is a link.</a></p>";
+
+    // Attempting to use innerHTML with an object, which isn't valid
+    let myObj = {name: "Test"};
+    document.getElementById("myDiv").innerHTML = myObj;
+  </script>
+</body>
+</html>
